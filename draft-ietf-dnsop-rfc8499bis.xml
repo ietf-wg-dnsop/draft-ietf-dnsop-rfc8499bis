@@ -1128,6 +1128,43 @@ DNS over TLS <xref target="RFC7858"/> and may optionally implement DNS over DTLS
 Other types of DNS servers might also be considered privacy-enabling, such as those
 running DNS over HTTPS <xref target="RFC8484" />.</t>
 
+<t hangText='DNS-over-TLS (DoT):'>
+<iref item='DNS-over-TLS'/>
+<iref item='DoT'/>
+DNS over TLS as defined in <xref target="RFC7858"/> and its successors.</t>
+
+<t hangText='DNS-over-HTTPS (DoH):'>
+<iref item='DNS-over-HTTPS'/>
+<iref item='DoH'/>
+DNS over HTTPS as defined in <xref target="RFC8484" /> and its successors.</t>
+
+<t hangText='DNS-over-QUIC (DoQ):'>
+<iref item='DNS-over-QUIC'/>
+<iref item='DoQ'/>
+DNS over QUIC as defined in <xref target="ietf-dprive-dnsoquic"/></t>
+
+<t hangText='Classic DNS:'>
+<iref item='Classic DNS'/>
+DNS over UDP or TCP as defined in <xref target="RFC1035" /> and its successors.
+Classic DNS applies to DNS communication between stub resolvers and recursive
+resolvers, and between recursive resolvers and authoritative servers.
+This has sometimes been called "Do53".
+Classic DNS is not encrypted.</t>
+
+<t hangText='Recursive DoT (RDoT):'>
+<iref item='Recursive DoT'/>
+<iref item='RDoT'/>
+RDoT specifically means DNS-over-TLS for transport between a stub resolver and a
+recursive resolver, or between a recursive resolver and another recursive resolver.
+This term is necessary because it is expected that DNS-over-TLS will later be
+defined as a transport between recursive resolvers and authoritative servers,</t>
+
+<t hangText='Authoritative DoT (ADoT):'>
+<iref item='ADoT'/>
+If DNS-over-TLS is later defined as a transport between recursive resolvers and
+authoritative servers, ADoT specifically means DNS-over-TLS for transport
+between recursive resolvers and authoritative servers.</t>
+
 </list></t>
 </section>
 
@@ -1932,6 +1969,12 @@ position as to whether they need to be reconciled.</t>
 <front><title>Resource Record (RR) TYPEs</title>
 <author><organization>IANA</organization></author><date/></front>
 </reference>
+
+<?rfc include="reference.I-D.ietf-dprive-dnsoquic.xml" ?>
+
+<!--
+<xi:include href="https://xml2rfc.ietf.org/public/rfc/bibxml3/reference.I-D.ietf-dprive-dnsoquic.xml"/>
+-->
 
 <?rfc include="reference.RFC.0819.xml" ?>
 <?rfc include="reference.RFC.0952.xml" ?>
