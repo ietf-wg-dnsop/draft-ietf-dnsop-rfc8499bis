@@ -69,7 +69,7 @@ document.</t>
 
 <t>The Domain Name System (DNS) is a simple query-response protocol
 whose messages in both directions have the same format.  (<xref
-target="names"/> gives a definition of "public DNS", which is often
+target="names"/> gives a definition of "global DNS", which is often
 what people mean when they say "the DNS".)  The protocol and message
 format are defined in <xref target="RFC1034"/> and <xref
 target="RFC1035"/>. These RFCs defined some terms, and later documents
@@ -796,10 +796,10 @@ provided. Both authoritative servers and recursive resolvers are often
 called "DNS servers" and "name servers" even though they serve
 different roles (but may be part of the same software package).</t>
 
-<t>For terminology specific to the public DNS root server system, see
+<t>For terminology specific to the global DNS root server system, see
 <xref target="RSSAC026"/>.  That document defines terms such as "root
 server", "root server operator", and terms that are specific to the
-way that the root zone of the public DNS is served.</t>
+way that the root zone of the global DNS is served.</t>
 
 <t><list style="hanging">
 
@@ -1024,7 +1024,7 @@ master name server that processes the updates is unavailable to general hosts on
 Internet; it is not listed in the NS RRset."  (Quoted from
 <xref target="RFC6781"/>, Section 3.4.3)  An earlier RFC, <xref target="RFC4641"/>, said
 that the hidden master's name "appears in the SOA RRs MNAME field", although, in some
-setups, the name does not appear at all in the public DNS.  A hidden master can also be a
+setups, the name does not appear at all in the global DNS.  A hidden master can also be a
 secondary server for the zone itself.</t>
 
 <t hangText='Forwarding:'>
