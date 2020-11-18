@@ -2050,8 +2050,10 @@ note, however, that this RFC is already obsolete
 <t>"Alias" in <xref target="names"/></t>
 <t>"Apex" in <xref target="zones"/></t>
 <t>"arpa" in <xref target="zones"/></t>
+<t>"Authoritative DoT (ADot)" in <xref target="dns-servers-and-clients"/></t>
 <t>"Bailiwick" in <xref target="zones"/></t>
 <t>"Class independent" in <xref target="rrs"/></t>
+<t>"Classic DNS" in <xref target="dns-servers-and-clients"/></t>
 <t>"Delegation-centric zone" in <xref target="zones"/></t>
 <t>"Delegation" in <xref target="zones"/></t>
 <t>"DNS operator" in <xref target="reg-model"/></t>
@@ -2078,6 +2080,7 @@ note, however, that this RFC is already obsolete
 <t>"Presentation format" in <xref target="rrs"/></t>
 <t>"Priming" in <xref target="dns-servers-and-clients"/></t>
 <t>"Private DNS" in <xref target="names"/></t>
+<t>"Recrusive DoT (RDot)" in <xref target="dns-servers-and-clients"/></t>
 <t>"Recursive resolver" in <xref target="dns-servers-and-clients"/></t>
 <t>"Referrals" in <xref target="dns-transactions"/></t>
 <t>"Registrant" in <xref target="reg-model"/></t>
