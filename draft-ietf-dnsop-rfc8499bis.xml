@@ -1297,23 +1297,25 @@ For example, a delegation for "child.example.com" in "example.com" zone may have
 <t>"Out-of-bailiwick" is the antonym of "in-bailiwick".
 It is a modifier to describe a name server whose name
 is not subordinate to or the same as the zone origin.
-Glue records for out-of-bailiwick name servers are useless.
+Glue records for out-of-bailiwick name servers are useless.</t>
 
-The following table shows examples of delegation types.
+<t>The following table shows examples of delegation types.</t>
 
-<figure><artwork><![CDATA[
-Delegation |Parent|Name Server Name  | Type
------------+------+------------------+-----------------------------
-com        | .    |a.gtld-servers.net|in-bailiwick / sibling domain
-net        | .    |a.gtld-servers.net|in-bailiwick / in-domain
-example.org| org  |ns.example.org    |in-bailiwick / in-domain
-example.org| org  |ns.ietf.org       |in-bailiwick / sibling domain
-example.org| org  |ns.example.com    |out-of-bailiwick
-example.jp | jp   |ns.example.jp     |in-bailiwick / in-domain
-example.jp | jp   |ns.example.ne.jp  |in-bailiwick / sibling domain
-example.jp | jp   |ns.example.com    |out-of-bailiwick
-]]></artwork></figure>
-</t>
+<t><table anchor="delegation_types">
+<thead>
+<tr>   <th>Delegation</th>   <th>Parent</th>   <th>Name Server Name</th>   <th>Type</th>   </tr>
+</thead>
+<tbody>
+<tr>   <td>com</td>   <td>.</td>   <td>a.gtld-servers.net</td>   <td>in-bailiwick / sibling domain</td>   </tr>
+<tr>   <td>net</td>   <td>.</td>   <td>a.gtld-servers.net</td>   <td>in-bailiwick / in-domain</td>   </tr>
+<tr>   <td>example.org</td>   <td>org</td>   <td>ns.example.org</td>   <td>in-bailiwick / in-domain</td>   </tr>
+<tr>   <td>example.org</td>   <td>org</td>   <td>ns.ietf.org</td>   <td>in-bailiwick / sibling domain</td>   </tr>
+<tr>   <td>example.org</td>   <td>org</td>   <td>ns.example.com</td>   <td>out-of-bailiwick</td>   </tr>
+<tr>   <td>example.jp</td>   <td>jp</td>   <td>ns.example.jp</td>   <td>in-bailiwick / in-domain</td>   </tr>
+<tr>   <td>example.jp</td>   <td>jp</td>   <td>ns.example.ne.jp</td>   <td>in-bailiwick / sibling domain</td>   </tr>
+<tr>   <td>example.jp</td>   <td>jp</td>   <td>ns.example.com</td>   <td>out-of-bailiwick</td>   </tr>
+</tbody>
+</table></t>
 
 <t hangText='Root zone:'>
 <iref item='Root zone'/>
