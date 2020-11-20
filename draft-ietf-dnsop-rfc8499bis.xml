@@ -35,16 +35,9 @@
 <keyword>vocabulary, domain name system</keyword>
 
 <!--
-	-ter terms
-	PTI
-	"online signing"
-	Turn delegations types table into an XML table
+	Change "PTI" to "IANA"
+	Maybe add "online signing"
 	Review DNSOP mailing list
-	Update reference to RSSAC026
-		Instance definition is now:
-		An instance, or an anycast instance, is the portion of a root server operator's infrastructure 2
-		that serves root data at one site (i.e., topological location on the Internet) using an IP address
-		associated with a root server identifier.
 	bailiwick - https://mailarchive.ietf.org/arch/msg/dnsop/5bKXkqzCyGE1NuUko9M6wXLD5bI
 -->
 
