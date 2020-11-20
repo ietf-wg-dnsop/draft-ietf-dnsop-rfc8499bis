@@ -1539,7 +1539,7 @@ In fact, both a domain and a subdomain of that domain can be public suffixes.
 <t>There is nothing inherent in a domain name to indicate whether it is
 a public suffix.  One
 resource for identifying public suffixes is the Public Suffix List (PSL)
-maintained by Mozilla (http://publicsuffix.org/).</t>
+maintained by Mozilla (https://publicsuffix.org/).</t>
 
 <t>For example, at the time this document is published,
 the "com.au" domain is listed as a public suffix in the PSL.
