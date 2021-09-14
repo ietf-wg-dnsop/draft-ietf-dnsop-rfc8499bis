@@ -35,7 +35,6 @@
 <keyword>vocabulary, domain name system</keyword>
 
 <!--
-	Maybe add "online signing"
 	Review DNSOP mailing list
 	bailiwick - https://mailarchive.ietf.org/arch/msg/dnsop/5bKXkqzCyGE1NuUko9M6wXLD5bI
 	XoT from RFC 9103
@@ -1651,6 +1650,13 @@ the algorithms listed in an authenticated DS RRset, then the resolver will not b
 authentication path to the child zone.  In this case, the resolver SHOULD treat the child zone as if
 it were unsigned."
 <!--End DNE -->
+</t>
+
+<t hangText='Online signing:'>
+<iref item='online signing'/>
+There are two major modes for signing zones: create a zone file with all the required DNSSEC-related records,
+or create the required additional records when requests come in to the authoritative server.
+The latter mode of operation is called online signing.
 </t>
 
 <t hangText='NSEC:'>
