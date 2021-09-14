@@ -35,7 +35,6 @@
 <keyword>vocabulary, domain name system</keyword>
 
 <!--
-	Change "PTI" to "IANA"
 	Maybe add "online signing"
 	Review DNSOP mailing list
 	bailiwick - https://mailarchive.ietf.org/arch/msg/dnsop/5bKXkqzCyGE1NuUko9M6wXLD5bI
@@ -225,9 +224,7 @@ definition of "delegation" in <xref target="zones"/>).  Policies for administrat
 the root zone in the global DNS are determined by the names operational community, which
 convenes itself in the Internet Corporation for Assigned Names and Numbers (ICANN).  The
 names operational community selects the IANA Functions Operator for the global DNS root
-zone. At the time of writing, that operator is Public Technical
-Identifiers (PTI).
-(See &lt;https://pti.icann.org/&gt; for more information about PTI operating the IANA Functions.)
+zone.
 The name servers that serve the root zone are provided by independent
 root operators. Other zones in the global DNS have their own policies for
 administration.</t>
