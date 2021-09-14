@@ -1630,6 +1630,14 @@ longer required for signed zones: a signed zone might include NSEC3 records inst
 NSEC3 mechanisms used by DNSSEC to provide authenticated denial-of-existence responses.
 NSEC and NSEC3 are described below.</t>
 
+<t hangText='Online signing:'>
+<iref item='online signing'/><iref item='on-line signing'/>
+<xref target="RFC4470"/> defines "on-line signing" (note the hyphen) as
+"generating and signing these records on demand", where "these" was defined
+as NSEC records. The current definition expands that to
+generating and signing RRSIG, NSEC, and NSEC3 records on demand.
+</t>
+
 <t hangText='Unsigned zone:'>
 <iref item='Unsigned zone'/>
 Section 2 of <xref target="RFC4033"/> defines this as "a zone that is not signed". Section 2 of
@@ -1975,6 +1983,7 @@ position as to whether they need to be reconciled.</t>
 <?rfc include="reference.RFC.3493.xml" ?>
 <?rfc include="reference.RFC.3757.xml" ?>
 <?rfc include="reference.RFC.3912.xml" ?>
+<?rfc include="reference.RFC.4470.xml" ?>
 <?rfc include="reference.RFC.4641.xml" ?>
 <?rfc include="reference.RFC.4697.xml" ?>
 <?rfc include="reference.RFC.4786.xml" ?>
