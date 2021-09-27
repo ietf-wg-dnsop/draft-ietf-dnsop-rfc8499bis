@@ -1160,8 +1160,10 @@ between recursive resolvers and authoritative servers.</t>
 
 <t hangText='XFR-over-TLS (XoT):'>
 <iref item='XoT'/>
+<iref item='AXoT'/>
+<iref item='IXoT'/>
 DNS zone transfer over TLS, as specified in <xref target="RFC9103"/>.
-This term applies to both AXFR over TLS and IXFR over TLS.</t>
+This term applies to both AXFR over TLS (AXoT) and IXFR over TLS (IXoT).</t>
 
 </list></t>
 </section>
