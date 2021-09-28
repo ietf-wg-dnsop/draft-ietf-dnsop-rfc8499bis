@@ -37,7 +37,6 @@
 <!--
 	Review DNSOP mailing list
 	bailiwick - https://mailarchive.ietf.org/arch/msg/dnsop/5bKXkqzCyGE1NuUko9M6wXLD5bI
-	XoT from RFC 9103
 -->
 
 <abstract>
@@ -1155,6 +1154,13 @@ If DNS-over-TLS is later defined as a transport between recursive resolvers and
 authoritative servers, ADoT specifically means DNS-over-TLS for transport
 between recursive resolvers and authoritative servers.</t>
 
+<t hangText='XFR-over-TLS (XoT):'>
+<iref item='XoT'/>
+<iref item='AXoT'/>
+<iref item='IXoT'/>
+DNS zone transfer over TLS, as specified in <xref target="RFC9103"/>.
+This term applies to both AXFR over TLS (AXoT) and IXFR over TLS (IXoT).</t>
+
 </list></t>
 </section>
 
@@ -2012,6 +2018,7 @@ position as to whether they need to be reconciled.</t>
 <?rfc include="reference.RFC.8094.xml" ?>
 <?rfc include="reference.RFC.8109.xml" ?>
 <?rfc include="reference.RFC.8484.xml" ?>
+<?rfc include="reference.RFC.9103.xml" ?>
 
 <reference anchor="RSSAC026" target="https://www.icann.org/en/system/files/files/rssac-026-14mar17-en.pdf">
 <front><title>RSSAC Lexicon</title>
