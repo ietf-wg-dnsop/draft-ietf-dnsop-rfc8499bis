@@ -1289,7 +1289,7 @@ necessarily beyond.</t>
 
 <t hangText='In-domain glue:'>
 <iref item='In-domain glue'/>
-A modifier to describe a name server whose name is either
+A modifier to describe a glue record for a name server whose name is either
 subordinate to or (rarely) the same as the owner name of the NS resource records.
 An in-domain name server name needs to have glue records or name resolution fails.
 For example, a delegation for "child.example.com" may have "in-domain" name
@@ -1298,7 +1298,7 @@ server name "ns.child.example.com".
 
 <t hangText='Sibling domain glue:'>
 <iref item='Sibling domain glue'/>
-A name server's name that is either subordinate to or
+Glue records for a name server's name that is either subordinate to or
 (rarely) the same as the zone origin and not subordinate to or the same as the
 owner name of the NS resource records.
 Glue records for sibling domains are allowed, but not necessary.
