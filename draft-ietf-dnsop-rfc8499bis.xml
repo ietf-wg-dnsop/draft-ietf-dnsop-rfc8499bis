@@ -1290,12 +1290,12 @@ necessarily beyond.</t>
 
 <t>In an NS record, there are three types of relationships between the owner name of the record
 and the name in the NS RDATA: unrelated, in-domain, and sibling domain.
-The application of these three types of relationships is defined in
+The application of these three types of relationships to glue records is defined in
 <xref target="I-D.ietf-dnsop-glue-is-not-optional"/>.
 </t>
 
 <t>An unrelated relationship is one where the NS RDATA contains a name server
-that does not share the same parent as the owner name of NS record
+is not subordinate to the owner name of NS record
 and therefore is not part of the same zone.
 </t>
 
