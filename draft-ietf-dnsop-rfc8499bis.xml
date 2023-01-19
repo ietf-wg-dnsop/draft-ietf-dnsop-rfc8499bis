@@ -1295,8 +1295,7 @@ The application of these three types of relationships to glue records is defined
 </t>
 
 <t>An unrelated relationship is one where the NS RDATA contains a name server
-that is not subordinate to the owner name of the NS record
-and therefore is not part of the same zone.
+that is not subordinate to the zone origin and therefore is not part of the same zone.
 </t>
 
 <t>
