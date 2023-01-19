@@ -35,11 +35,6 @@
 <area>Internet</area>
 <keyword>vocabulary, domain name system</keyword>
 
-<!--
-	Review DNSOP mailing list
-	bailiwick - https://mailarchive.ietf.org/arch/msg/dnsop/5bKXkqzCyGE1NuUko9M6wXLD5bI
--->
-
 <abstract>
 
 <t>The Domain Name System (DNS) is defined in literally dozens of
@@ -1268,6 +1263,7 @@ server for that domain. Queries are thus sent to the wrong servers, who don't kn
 not as expected) about the queried domain. Furthermore, sometimes these hosts (if they exist!) don't
 even run name servers."  (Quoted from <xref target="RFC1713"/>, Section 2.3)</t>
 <!--End DNE -->
+
 <t hangText='Glue records:'>
 <iref item='Glue records'/>
 
@@ -1292,64 +1288,61 @@ with this wider definition in mind, the context surrounding the definition in <x
 suggests it is intended to apply to the use of glue within the document itself and not
 necessarily beyond.</t>
 
-<t hangText='Bailiwick:'>
-<iref item='In-bailiwick'/>
-<iref item='Out-of-bailiwick'/>
-"In-bailiwick" is a modifier to describe a name server whose name
-is either a subdomain of or (rarely) the same as the origin
-of the zone that contains the delegation to the name server.
-In-bailiwick name servers may have glue records in their parent
-zone (using the first of the definitions of "glue records" in the definition above).
-(The word "bailiwick" means the district or territory where a bailiff or
-policeman has jurisdiction.)
-
+<t>In an NS record, there are three types of relationships between the owner name of the record
+and the name in the NS RDATA and the zone origin: unrelated, in-domain, and sibling domain.
+The application of these three types of relationships to glue records is defined in
+<xref target="I-D.ietf-dnsop-glue-is-not-optional"/>.
 </t>
 
-<t>"In-bailiwick" names are divided into two types of names for name servers:
-"in-domain" names and "sibling domain" names.
+<t>An unrelated relationship is one where the NS RDATA contains a name server
+that is not subordinate to the zone origin and therefore is not part of the same zone.
+</t>
 
-<list style="symbols">
-
-<t>In-domain: a modifier to describe a name server whose name is either
+<t>
+<iref item='In-domain'/>
+An in-domain relationship is one where the NS RDATA contains a name server
+whose name is either
 subordinate to or (rarely) the same as the owner name of the NS resource records.
-An in-domain name server name needs to have glue records or name resolution fails.
-
-For example, a delegation for "child.example.com" may have "in-domain" name
-server name "ns.child.example.com".
+For example, a delegation for "child.example.com" might have an in-domain name
+server called "ns.child.example.com".
 </t>
 
-<t>Sibling domain: a name server's name that is either subordinate to or
+<t>
+<iref item='Sibling domain'/>
+A sibling domain relationship is one where the NS RDATA contains a name server
+whose name is either subordinate to or
 (rarely) the same as the zone origin and not subordinate to or the same as the
 owner name of the NS resource records.
-Glue records for sibling domains are allowed, but not necessary.
-For example, a delegation for "child.example.com" in "example.com" zone may have
-"sibling" name server name "ns.another.example.com".
+For example, a delegation for "child.example.com" in "example.com" zone might have
+a sibling domain name server called "ns.another.example.com".
 </t>
 
-</list></t>
-
-<t>"Out-of-bailiwick" is the antonym of "in-bailiwick".
-It is a modifier to describe a name server whose name
-is not subordinate to or the same as the zone origin.
-Glue records for out-of-bailiwick name servers are useless.</t>
-
-<t>The following table shows examples of delegation types.</t>
+<t>The following table shows examples of delegation types:</t>
 
 <t><table anchor="delegation_types">
 <thead>
-<tr>   <th>Delegation</th>   <th>Parent</th>   <th>Name Server Name</th>   <th>Type</th>   </tr>
+<tr>   <th>Delegation</th>   <th>Parent</th>   <th>Name Server Name</th>   <th>Type</th></tr>
 </thead>
 <tbody>
-<tr>   <td>com</td>   <td>.</td>   <td>a.gtld-servers.net</td>   <td>in-bailiwick / sibling domain</td>   </tr>
-<tr>   <td>net</td>   <td>.</td>   <td>a.gtld-servers.net</td>   <td>in-bailiwick / in-domain</td>   </tr>
-<tr>   <td>example.org</td>   <td>org</td>   <td>ns.example.org</td>   <td>in-bailiwick / in-domain</td>   </tr>
-<tr>   <td>example.org</td>   <td>org</td>   <td>ns.ietf.org</td>   <td>in-bailiwick / sibling domain</td>   </tr>
-<tr>   <td>example.org</td>   <td>org</td>   <td>ns.example.com</td>   <td>out-of-bailiwick</td>   </tr>
-<tr>   <td>example.jp</td>   <td>jp</td>   <td>ns.example.jp</td>   <td>in-bailiwick / in-domain</td>   </tr>
-<tr>   <td>example.jp</td>   <td>jp</td>   <td>ns.example.ne.jp</td>   <td>in-bailiwick / sibling domain</td>   </tr>
-<tr>   <td>example.jp</td>   <td>jp</td>   <td>ns.example.com</td>   <td>out-of-bailiwick</td>   </tr>
+<tr>   <td>com</td>   <td>.</td>   <td>a.gtld-servers.net</td>   <td>sibling domain</td></tr>
+<tr>   <td>net</td>   <td>.</td>   <td>a.gtld-servers.net</td>   <td>in-domain</td></tr>
+<tr>   <td>example.org</td>   <td>org</td>   <td>ns.example.org</td>   <td>in-domain</td></tr>
+<tr>   <td>example.org</td>   <td>org</td>   <td>ns.ietf.org</td>   <td>sibling domain</td></tr>
+<tr>   <td>example.org</td>   <td>org</td>   <td>ns.example.com</td>   <td>unrelated</td></tr>
+<tr>   <td>example.jp</td>   <td>jp</td>   <td>ns.example.jp</td>   <td>in-domain</td></tr>
+<tr>   <td>example.jp</td>   <td>jp</td>   <td>ns.example.ne.jp</td>   <td>sibling domain</td></tr>
+<tr>   <td>example.jp</td>   <td>jp</td>   <td>ns.example.com</td>   <td>unrelated</td></tr>
 </tbody>
 </table></t>
+
+<t hangText='Bailiwick:'>
+<iref item='Bailiwick'/>
+<iref item='In-bailiwick'/>
+<iref item='Out-of-bailiwick'/>
+"In-bailiwick" and "Out-of-bailiwick" are modifiers used to describe the relationship between
+a zone and the name servers	for that zone.
+The dictionary definition of bailiwick has been	observed to cause more confusion than meaning for this use.	
+These terms should be considered historic in nature.</t>
 
 <t hangText='Root zone:'>
 <iref item='Root zone'/>
@@ -1967,6 +1960,7 @@ position as to whether they need to be reconciled.</t>
 <?rfc include="reference.RFC.7719.xml" ?>
 <?rfc include="reference.RFC.8310.xml" ?>
 <?rfc include="reference.RFC.8499.xml" ?>
+<?rfc include="reference.I-D.ietf-dnsop-glue-is-not-optional.xml"?>
 
 </references>
 
@@ -2071,7 +2065,7 @@ note, however, that this RFC is already obsolete
 <t>"Hardware Security Module (HSM)" in <xref target="dnssec-general"/></t>
 <t>"Host name" in <xref target="names"/></t>
 <t>"IDN" in <xref target="names"/></t>
-<t>"In-bailiwick" in <xref target="zones"/></t>
+<t>"In-domain" in <xref target="zones"/></t>
 <t>"Iterative resolution" in <xref target="dns-servers-and-clients"/></t>
 <t>"Label" in <xref target="names"/></t>
 <t>"Locally served DNS zone" in <xref target="names"/></t>
@@ -2079,7 +2073,6 @@ note, however, that this RFC is already obsolete
 <t>"Negative response" in <xref target="dns-response-codes"/></t>
 <t>"Non-recursive query" in <xref target="dns-servers-and-clients"/></t>
 <t>"Open resolver" in <xref target="dns-servers-and-clients"/></t>
-<t>"Out-of-bailiwick" in <xref target="zones"/></t>
 <t>"Passive DNS" in <xref target="dns-servers-and-clients"/></t>
 <t>"Policy-implementing resolver" in <xref target="dns-servers-and-clients"/></t>
 <t>"Presentation format" in <xref target="rrs"/></t>
@@ -2093,6 +2086,7 @@ note, however, that this RFC is already obsolete
 <t>"Registry" in <xref target="reg-model"/></t>
 <t>"Root zone" in <xref target="zones"/></t>
 <t>"Secure Entry Point (SEP)" in <xref target="dnssec-general"/></t>
+<t>"Sibling domain" in <xref target="zones"/></t>
 <t>"Signing software" in <xref target="dnssec-general"/></t>
 <t>"Split DNS" in <xref target="dns-servers-and-clients"/></t>
 <t>"Stub resolver" in <xref target="dns-servers-and-clients"/></t>
