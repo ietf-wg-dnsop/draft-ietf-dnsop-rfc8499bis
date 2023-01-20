@@ -11,7 +11,7 @@
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
 
-<rfc docName="draft-ietf-dnsop-rfc8499bis-04"
+<rfc docName="draft-ietf-dnsop-rfc8499bis-05"
 	ipr="trust200902" category="bcp" obsoletes="8499" updates="2308" consensus="yes">
 
 <front>
@@ -2112,10 +2112,8 @@ Andrew's work on the earlier documents is greatly appreciated.</t>
 Please see the acknowledgements sections in those two documents for the
 extensive list of contributors.</t>
 
-<!--
 <t>Even though the current document is a small revision, many people in the
 DNSOP Working Group have contributed to it, and their work is greatly appreciated.</t>
--->
 
 </section>
 
