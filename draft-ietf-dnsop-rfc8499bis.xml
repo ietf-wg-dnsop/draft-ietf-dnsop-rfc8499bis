@@ -1111,7 +1111,7 @@ instance'."  (Quoted from <xref target="RSSAC026" />)</t>
 DNS over TLS <xref target="RFC7858"/> and may optionally implement DNS over DTLS
 <xref target="RFC8094"/>."  (Quoted from <xref target="RFC8310"/>, Section 2)
 Other types of DNS servers might also be considered privacy-enabling, such as those
-running DNS over HTTPS <xref target="RFC8484" />.</t>
+running DNS-over-HTTPS <xref target="RFC8484" /> or DNS-over-QUIC <xref target="RFC9250" />.</t>
 
 <t hangText='DNS-over-TLS (DoT):'>
 <iref item='DNS-over-TLS'/>
@@ -1126,7 +1126,10 @@ DNS over HTTPS as defined in <xref target="RFC8484" /> and its successors.</t>
 <t hangText='DNS-over-QUIC (DoQ):'>
 <iref item='DNS-over-QUIC'/>
 <iref item='DoQ'/>
-DNS over QUIC as defined in <xref target="I-D.ietf-dprive-dnsoquic"/></t>
+DNS over QUIC as defined in <xref target="RFC9250" /> and its successors. 
+<xref target="RFC9250" /> specifically defines DoQ as a general purpose transport
+for DNS that can be used in stub to recursive, recursive to authoritative or 
+zone transfer scenarios.</t>
 
 <t hangText='Classic DNS:'>
 <iref item='Classic DNS'/>
