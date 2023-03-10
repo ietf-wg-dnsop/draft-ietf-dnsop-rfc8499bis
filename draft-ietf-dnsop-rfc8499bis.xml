@@ -1963,6 +1963,7 @@ position as to whether they need to be reconciled.</t>
 <?rfc include="reference.RFC.7719.xml" ?>
 <?rfc include="reference.RFC.8310.xml" ?>
 <?rfc include="reference.RFC.8499.xml" ?>
+<?rfc include="reference.RFC.9250.xml" ?>
 <?rfc include="reference.I-D.ietf-dnsop-glue-is-not-optional.xml"?>
 
 </references>
@@ -1973,8 +1974,6 @@ position as to whether they need to be reconciled.</t>
 <front><title>Resource Record (RR) TYPEs</title>
 <author><organization>IANA</organization></author><date/></front>
 </reference>
-
-<?rfc include="reference.I-D.ietf-dprive-dnsoquic.xml" ?>
 
 <?rfc include="reference.RFC.0819.xml" ?>
 <?rfc include="reference.RFC.0952.xml" ?>
