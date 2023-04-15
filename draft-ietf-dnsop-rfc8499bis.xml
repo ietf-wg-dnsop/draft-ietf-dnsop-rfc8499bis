@@ -11,18 +11,9 @@
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
 
-<rfc docName="draft-ietf-dnsop-rfc8499bis-06"
+<rfc docName="draft-ietf-dnsop-rfc8499bis-07"
 	ipr="trust200902" category="bcp" obsoletes="8499" updates="2308" consensus="yes">
 	
-<!-- BEFORE DOING -07
-
-Change:
-(rarely) the same as the zone origin and not subordinate to or the same as the
-To:
-(rarely) the same as the zone origin of the parent and not subordinate to or the same as the
-
--->
-
 <front>
 <title abbrev="DNS Terminology">DNS Terminology</title>
 
@@ -1276,6 +1267,9 @@ not as expected) about the queried domain. Furthermore, sometimes these hosts (i
 even run name servers."  (Quoted from <xref target="RFC1713"/>, Section 2.3)</t>
 <!--End DNE -->
 
+<t>These early definitions do not match the current use of the term "lame delegation",
+but there is not consensus on what a lame delegation is.</t>
+
 <t hangText='Glue records:'>
 <iref item='Glue records'/>
 
@@ -1323,7 +1317,7 @@ server called "ns.child.example.com".
 <iref item='Sibling domain'/>
 A sibling domain relationship is one where the NS RDATA contains a name server
 whose name is either subordinate to or
-(rarely) the same as the zone origin and not subordinate to or the same as the
+(rarely) the same as the zone origin of the parent and not subordinate to or the same as the
 owner name of the NS resource records.
 For example, a delegation for "child.example.com" in "example.com" zone might have
 a sibling domain name server called "ns.another.example.com".
