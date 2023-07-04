@@ -11,7 +11,7 @@
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
 
-<rfc docName="draft-ietf-dnsop-rfc8499bis-07"
+<rfc docName="draft-ietf-dnsop-rfc8499bis-08"
 	ipr="trust200902" category="bcp" obsoletes="8499" updates="2308" consensus="yes">
 	
 <front>
@@ -1268,7 +1268,27 @@ even run name servers."  (Quoted from <xref target="RFC1713"/>, Section 2.3)</t>
 <!--End DNE -->
 
 <t>These early definitions do not match the current use of the term "lame delegation",
-but there is not consensus on what a lame delegation is.</t>
+but there is not consensus on what a lame delegation is.
+The term is used not only for the specific case described above,
+but for a variety of other flaws in delegations that lead to non-authoritative
+answers or no answers at all, such as:
+
+<list style="symbols">
+<t>
+a nameserver with an NS record for a zone that does not answer DNS queries
+</t>
+<t>
+a nameserver with an IP address that is not reachable by the resolver
+</t>
+<t>
+a nameserver that responds to a query for a specific name with an error or
+without the authoritative bit set
+</t>
+</list></t>
+
+<t>Because the term in current usage has drifted from the original definition, and now
+is not specific or clear as to the intended meaning, it should be considered historic,
+and avoided in favor of terms that are specific and clear.</t>
 
 <t hangText='Glue records:'>
 <iref item='Glue records'/>
