@@ -1944,7 +1944,7 @@ position as to whether they need to be reconciled.</t>
 
 <section anchor="ianacons" title="IANA Considerations">
 
-<t>This document has no IANA actions.</t>
+<t>Any reference to RFC 8499 in the IANA registries should be replaced with a reference to this document.</t>
 
 </section>
 
