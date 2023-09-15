@@ -242,7 +242,7 @@ the definition of "empty non-terminals" in <xref target="zones"/>).</t>
 <t>Protocol for getting data from a name: The protocol described in <xref
 target="RFC1035"/>.</t>
 
-<t>Context for resolving a name: The global DNS root zone distributed by PTI.</t>
+<t>Context for resolving a name: The global DNS root zone distributed by Public Technical Identifiers (PTI).</t>
 
 <t hangText='Private DNS:'>
 <iref item='Private DNS'/>
@@ -1150,7 +1150,7 @@ Classic DNS is not encrypted.</t>
 RDoT specifically means DNS-over-TLS for transport between a stub resolver and a
 recursive resolver, or between a recursive resolver and another recursive resolver.
 This term is necessary because it is expected that DNS-over-TLS will later be
-defined as a transport between recursive resolvers and authoritative servers,</t>
+defined as a transport between recursive resolvers and authoritative servers.</t>
 
 <t hangText='Authoritative DoT (ADoT):'>
 <iref item='ADoT'/>
