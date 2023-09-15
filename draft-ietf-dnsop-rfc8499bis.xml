@@ -552,7 +552,7 @@ also being the QNAME.
 </t>
 
 <t>
-However, this creates a kind of confusion because the response to a
+However, this creates confusion because the response to a
 query that results in CNAME processing contains in the echoed Question
 section one QNAME (the name in the original query) and a second QNAME
 that is in the data field of the last CNAME.  The confusion comes from
