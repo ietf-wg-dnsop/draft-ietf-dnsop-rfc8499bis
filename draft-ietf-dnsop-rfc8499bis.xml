@@ -109,6 +109,9 @@ capitalization styles are wrong or archaic.
 In some cases, multiple styles of capitalization are used for the same term due to quoting
 from different RFCs.</t>
 
+<t>In this document, the word "byte" and "octet" are used interchangably.
+They both appear here because they both appear in the earlier RFCs that defined terms in the DNS.</t>
+
 <t>Readers should note that the terms in this document are grouped by topic.
 Someone who is not already familiar with the DNS probably cannot
 learn about the DNS from scratch by reading this document from front to back. 
