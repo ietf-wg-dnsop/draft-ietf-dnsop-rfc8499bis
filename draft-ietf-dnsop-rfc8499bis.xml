@@ -109,6 +109,9 @@ capitalization styles are wrong or archaic.
 In some cases, multiple styles of capitalization are used for the same term due to quoting
 from different RFCs.</t>
 
+<t>In this document, the words "byte" and "octet" are used interchangably.
+They both appear here because they both appear in the earlier RFCs that defined terms in the DNS.</t>
+
 <t>Readers should note that the terms in this document are grouped by topic.
 Someone who is not already familiar with the DNS probably cannot
 learn about the DNS from scratch by reading this document from front to back. 
@@ -239,7 +242,7 @@ the definition of "empty non-terminals" in <xref target="zones"/>).</t>
 <t>Protocol for getting data from a name: The protocol described in <xref
 target="RFC1035"/>.</t>
 
-<t>Context for resolving a name: The global DNS root zone distributed by PTI.</t>
+<t>Context for resolving a name: The global DNS root zone distributed by Public Technical Identifiers (PTI).</t>
 
 <t hangText='Private DNS:'>
 <iref item='Private DNS'/>
@@ -549,7 +552,7 @@ also being the QNAME.
 </t>
 
 <t>
-However, this creates a kind of confusion because the response to a
+However, this creates confusion because the response to a
 query that results in CNAME processing contains in the echoed Question
 section one QNAME (the name in the original query) and a second QNAME
 that is in the data field of the last CNAME.  The confusion comes from
@@ -1147,7 +1150,7 @@ Classic DNS is not encrypted.</t>
 RDoT specifically means DNS-over-TLS for transport between a stub resolver and a
 recursive resolver, or between a recursive resolver and another recursive resolver.
 This term is necessary because it is expected that DNS-over-TLS will later be
-defined as a transport between recursive resolvers and authoritative servers,</t>
+defined as a transport between recursive resolvers and authoritative servers.</t>
 
 <t hangText='Authoritative DoT (ADoT):'>
 <iref item='ADoT'/>
