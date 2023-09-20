@@ -1941,7 +1941,7 @@ position as to whether they need to be reconciled.</t>
 
 <section anchor="securitycons" title="Security Considerations">
 
-<t>These definitions do not change any security considerations for the DNS.</t>
+<t>These definitions do not change any security considerations for either the global DNS or the private DNS.</t>
 
 </section>
 
