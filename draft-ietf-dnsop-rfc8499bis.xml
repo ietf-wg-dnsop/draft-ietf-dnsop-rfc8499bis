@@ -894,7 +894,7 @@ This term is used in <xref target="RFC1035"/>, but it is not defined there. RFC
 1123 defines a "full-service resolver" that may or may not be what was intended
 by "full resolver" in <xref target="RFC1035"/>.
 This term is not properly defined in any RFC, and there is no consensus on what the term means.
-The use of these term without proper context is discouraged.</t>
+The use of this term without proper context is discouraged.</t>
 
 <t hangText='Full-service resolver:'>
 <iref item='Full-service resolver'/>
