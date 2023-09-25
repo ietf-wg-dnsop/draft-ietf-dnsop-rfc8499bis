@@ -888,14 +888,13 @@ target="RFC1034"/>.)</t>
 and/or aliases. The iterative resolution algorithm is described in Section 5.3.3 of <xref
 target="RFC1034"/>.</t>
 
-
-
 <t hangText='Full resolver:'>
 <iref item='Full resolver'/>
 This term is used in <xref target="RFC1035"/>, but it is not defined there. RFC
 1123 defines a "full-service resolver" that may or may not be what was intended
 by "full resolver" in <xref target="RFC1035"/>.
-This term is not properly defined in any RFC.</t>
+This term is not properly defined in any RFC, and there is no consensus on what the term means.
+The use of this term without proper context is discouraged.</t>
 
 <t hangText='Full-service resolver:'>
 <iref item='Full-service resolver'/>
@@ -1941,7 +1940,7 @@ position as to whether they need to be reconciled.</t>
 
 <section anchor="securitycons" title="Security Considerations">
 
-<t>These definitions do not change any security considerations for the DNS.</t>
+<t>These definitions do not change any security considerations for either the global DNS or the private DNS.</t>
 
 </section>
 
