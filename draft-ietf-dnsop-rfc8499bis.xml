@@ -2107,7 +2107,7 @@ note, however, that this RFC is already obsolete
 <t>"Presentation format" in <xref target="rrs"/></t>
 <t>"Priming" in <xref target="dns-servers-and-clients"/></t>
 <t>"Private DNS" in <xref target="names"/></t>
-<t>"Recrusive DoT (RDot)" in <xref target="dns-servers-and-clients"/></t>
+<t>"Recursive DoT (RDot)" in <xref target="dns-servers-and-clients"/></t>
 <t>"Recursive resolver" in <xref target="dns-servers-and-clients"/></t>
 <t>"Referrals" in <xref target="dns-transactions"/></t>
 <t>"Registrant" in <xref target="reg-model"/></t>
