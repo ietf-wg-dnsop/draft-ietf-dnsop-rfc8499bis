@@ -2391,6 +2391,10 @@ a) We always go with what you want for hypneation, even as it changes over time.
 
 b) The hyphenated version of these terms is much easier for the reader to understand.
 Those terms are specific protocols, not just "DNS running over a transport".
+
+If you are uncomfortable with our response to (b), consider adding text to the Introduction,
+as part of the paragraph on capitalization, that hyphenation of terms is also
+inconsistent across RFCs.
 -->
 
 <!-- [rfced] Although we see your note about inconsistent capitalization in the Introduction, we wonder if you'd like to make the terms below consistent within this document.  The following terms use inconsistent capitalization outside of quoted/DNE text. If there is a desire to make these consistent, please let us know which form you prefer.
