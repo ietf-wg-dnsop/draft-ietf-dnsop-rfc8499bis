@@ -1592,7 +1592,7 @@ This "occurs when a domain is [found] in DNS using A records to multiple IP addr
 each of which has a very short Time-to-Live (TTL) value associated with it.  This means
 that the domain resolves to varying IP addresses over a short period of time."
 (Quoted from <xref target="RFC6561" sectionFormat="comma" section="1.1.5"/>, with a typo corrected)
-In addition to having legitimate uses, fast flux DNS can be used to deliver malware.
+In addition to having legitimate uses, fast flux DNS can used to deliver malware.
 Because the addresses change so rapidly, it is difficult to
 ascertain all the hosts.  It should be noted that the technique also works
 with AAAA records, but such use is not frequently observed on the
