@@ -1980,11 +1980,17 @@ both DNS keys and data is a matter of local policy, which may extend or even ove
   sometimes ambiguous and needs to be evaluated in context (see <xref target="dns-servers-and-clients" format="default"/>), "validating resolver" is a
   context-sensitive term.
 </dd>
+<!-- [authors] This change in capitalization is wrong. The term "key signing key" is used with lowercase
+in the document that defined the term, RFC 4033, and later documents. RFC 8499 purposely used the lowercase
+version instead of the officious capitalizatin that was used in RFC 6781. Stet. -->
         <dt>Key Signing Key (KSK):</dt>
         <dd>
           <iref item="Key Signing Key (KSK)" subitem="" primary="false"/>
 DNSSEC keys that "only sign the apex DNSKEY RRset in a zone." (Quoted from
 <xref target="RFC6781" sectionFormat="comma" section="3.1"/>)</dd>
+<!-- [authors] This change in capitalization is wrong. The term "zone signing key" is used with lowercase
+in the document that defined the term, RFC 4033, and later documents. RFC 8499 purposely used the lowercase
+version instead of the officious capitalizatin that was used in RFC 6781. Stet. -->
         <dt>Zone Signing Key (ZSK):</dt>
         <dd>
           <iref item="Zone Signing Key (ZSK)" subitem="" primary="false"/>
