@@ -498,7 +498,10 @@ query.
 class (QCLASS) and asks for RRs which match."  (Quoted from <xref target="RFC1034" sectionFormat="comma" section="3.7.1"/>)
 <!--END DNE -->
 Strictly speaking, the definition comes from <xref target="RFC1035" sectionFormat="comma" section="4.1.2"/>, where the QNAME is defined in respect of the Question
-section. This definition appears to be applied consistently, as the discussion
+section. 
+<!-- [authors] There is clearly a mistake below, in that old and new text both appear.
+It is not clear which the RFC Editor meant to keep. -->
+This definition appears to be applied consistently, as the discussion
 of inverse queries in Section 6.4.1 of [RFC1035] refers to the "owner name of
 the query RR and its TTL" because inverse queries populate the Answer section
 and leave the Question section empty.
@@ -822,6 +825,9 @@ but many are undefined for other classes.</dd>
         <dt>Address records:</dt>
         <dd>
           <iref item="Address records" subitem="" primary="false"/>
+<!-- [authors]  The following change is technically incorrect because a record
+can have only one type. The orginal was "Records whose type is A or AAAA."
+Maybe instead use "Records whose type is either A or AAAA." -->
 Records whose types are A or AAAA. 
 <xref target="RFC2181" format="default"/> informally defines these as "(A, AAAA, etc)".
 Note that new types of address records could be defined in the future.</dd>
@@ -1576,7 +1582,8 @@ This "occurs when a domain is [found] in DNS using A records to multiple IP addr
 each of which has a very short Time-to-Live (TTL) value associated with it.  This means
 that the domain resolves to varying IP addresses over a short period of time."
 (Quoted from <xref target="RFC6561" sectionFormat="comma" section="1.1.5"/>, with a typo corrected)
-In addition to having legitimate uses, fast flux DNS can used to deliver malware.
+<!-- [authors]  Added "be" in the sentence below based on a comment from a reader. -->
+In addition to having legitimate uses, fast flux DNS can be used to deliver malware.
 Because the addresses change so rapidly, it is difficult to
 ascertain all the hosts.  It should be noted that the technique also works
 with AAAA records, but such use is not frequently observed on the
