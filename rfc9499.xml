@@ -193,6 +193,7 @@ list of...
 Common display format: The common display format is used in applications and
 free text...
 -->
+<!-- [authors] Yes, please make this change.  -->
             <dd>The basic wire format for names in the global DNS is a list of labels ordered by
 decreasing distance from the root, with the root label last. Each label is preceded by a
 length octet. <xref target="RFC1035" format="default"/> also defines a compression scheme that modifies
@@ -272,6 +273,9 @@ A locally served DNS zone is a special case of private DNS.
 
 Perhaps: 
 A locally served DNS zone is a special case of a private DNS.
+-->
+<!-- [authors]
+No, the suggested change is not correct. The term "private DNS" is defined above, and the sentence below matches that description. Stet.
 -->
 A locally served DNS zone is a special case of private DNS.
 Names are resolved using the DNS protocol in a local context. 
@@ -443,7 +447,7 @@ data." in <xref target="RFC1035" sectionFormat="of" section="4.1.1"/>.</dd>
 the given class, but [there] are no records of the given type.  A NODATA
 response has to be inferred from the answer." (Quoted from <xref target="RFC2308" sectionFormat="comma" section="1"/>)
 "NODATA is indicated by an answer with the RCODE set to NOERROR and no
-relevant answers in the Answer section.  The authority section will
+relevant answers in the Answer section.  The Authority section will
 contain an SOA record, or there will be no NS records there." (Quoted from <xref target="RFC2308" sectionFormat="comma" section="2.2"/>)
 Note that referrals have a similar format to NODATA replies; <xref target="RFC2308" format="default"/>
 explains how to distinguish them.</dd>
@@ -584,6 +588,7 @@ originally queried or a name received in a CNAME chain response.
 QNAME (final): The name actually resolved, which is either the name actually
 queried or else the last name in a CNAME chain response.  
 -->
+<!-- [authors] Yes, you make make this change.  -->
         <ul>
 <li>QNAME (original): The name actually sent in the Question section in the original query, which is
 always echoed in the (final) reply in the Question section when the QR bit is set to 1.
@@ -617,7 +622,7 @@ while answering a query.  It appears in step 3(b) of the algorithm in
         <dt/>
         <dd>There are two types of referral response.  The first is a downward
 referral (sometimes described as "delegation response"), where the
-server is authoritative for some portion of the QNAME.  The authority
+server is authoritative for some portion of the QNAME.  The Authority
 section RRset's RDATA contains the name servers specified at the
 referred-to zone cut.  In normal DNS operation, this kind of response
 is required in order to find names beneath a delegation.  The bare
@@ -626,7 +631,7 @@ that this is the only legitimate kind of referral in the DNS.</dd>
         <dt/>
         <dd>The second is an upward referral (sometimes described as "root
 referral"), where the server is not authoritative for any portion of
-the QNAME.  When this happens, the referred-to zone in the authority
+the QNAME.  When this happens, the referred-to zone in the Authority
 section is usually the root zone (".").  In normal DNS operation, this
 kind of response is not required for resolution or for correctly
 answering any query.  There is no requirement that any server send
@@ -638,7 +643,7 @@ the word "referral".</dd>
         <dd>A response that has only a referral contains an empty answer
 section.  It contains the NS RRset for the referred-to zone in the
 Authority section.  It may contain RRs that provide addresses in the
-additional section.  The AA bit is clear.</dd>
+Additional section.  The AA bit is clear.</dd>
         <dt/>
         <dd>In the case where the query matches an alias, and the server is not
 authoritative for the target of the alias but is authoritative for
@@ -647,7 +652,7 @@ produce a response that contains both the authoritative answer for the
 alias and a referral.  Such a partial answer and referral
 response has data in the Answer section.  It has the NS RRset for the
 referred-to zone in the Authority section.  It may contain RRs that
-provide addresses in the additional section.  The AA bit is set
+provide addresses in the Additional section.  The AA bit is set
 because the first name in the Answer section matches the QNAME and the
 server is authoritative for that answer (see <xref target="RFC1035" sectionFormat="comma" section="4.1.1"/>).</dd>
       </dl>
@@ -677,6 +682,8 @@ In addition, <xref target="RFC2181" format="default"/> states that "the TTLs of 
 <!-- [rfced] Please note that we have added quotation marks to definitions/quotes 
 from other RFCs that appear in definition lists throughout the document, 
 as <blockquote> cannot be used within definition lists.  -->
+<!-- [authors] Noted -->
+
               <!--Begin DNE -->
 "An RRset <bcp14>MAY</bcp14> have multiple RRSIG RRs associated with it. Note that
 as RRSIG RRs are closely tied to the RRsets whose signatures they
@@ -759,6 +766,8 @@ Perhaps:
 (Quoted from [RFC2181], Section 8) Note that [RFC1035] erroneously
 stated that this is a signed integer; that was fixed by [RFC2181].
 -->
+<!-- [authors]  Yes, please make this change. -->
+
 (Note that <xref target="RFC1035" format="default"/>
 erroneously stated that this is a signed integer; that was fixed by <xref target="RFC2181" format="default"/>.)</dd>
         <dt/>
@@ -782,6 +791,8 @@ operator might decide to shorten the time to live for operational purposes,
 for example, if there is a policy to disallow TTL values over a certain
 number.
 -->
+<!-- [authors]  Yes, please make this change. -->
+
         <dd>The reason that the TTL is the maximum time to live is that a cache operator
 might decide to shorten the time to live for operational purposes, such as if
 there is a policy to disallow TTL values over a certain number.
@@ -815,6 +826,7 @@ A resource record type that is not class independent has different
 meanings, depending on the DNS class of the record or if the meaning is
 undefined for some classes.
 -->
+<!-- [authors]  Either is OK. If you prefer the plural, please use it. -->
 A resource record type that is not class independent has different meanings depending on the
 DNS class of the record, or the meaning is undefined for some class.
 Most resource record types are defined for class 1 (IN, the Internet),
@@ -1077,6 +1089,7 @@ Perhaps:
 "appears in the SOA RRs MNAME field"; however, the name does
 not appear at all in the global DNS in some setups. 
 -->
+<!-- [authors]  Yes, your proposed wording is better. -->
 An earlier RFC, <xref target="RFC4641" format="default"/>, said
 that the hidden master's name "appears in the SOA RRs MNAME field", although, in some
 setups, the name does not appear at all in the global DNS.  A hidden master can also be a
@@ -1146,6 +1159,7 @@ Perhaps:
 Nevertheless, the effect of this is that a domain name that is
 notionally globally unique has different meanings for different network users.
 -->
+<!-- [authors] Yes, adding "Nevertheless" is fine. -->
 The effect of this is that a domain name that
 is notionally globally unique nevertheless has different meanings for
 different network users. This can sometimes be the result of a "view"
@@ -1224,6 +1238,7 @@ Perhaps:
 DNS that can be used in stub to recursive, recursive to authoritative, and
 zone transfer scenarios.
 -->
+<!-- [authors] Yes, that is fine.  -->
 <xref target="RFC9250" format="default"/> specifically defines DoQ as a general purpose transport
 for DNS that can be used in stub to recursive, recursive to authoritative or
 zone transfer scenarios.</dd>
@@ -1398,6 +1413,7 @@ Perhaps:
 
 *  a nameserver that responds to a query for a specific name with
    an error or without the authoritative bit set. -->
+<!-- [authors]  That is OK. -->
           <ul spacing="normal">
             <li>
 a nameserver with an NS record for a zone that does not answer DNS queries
@@ -1643,6 +1659,8 @@ Original:
       of a label equaling that value is an 'asterisk label'."  (Quoted
       from [RFC4592], Section 2.1.1)
 -->
+<!-- [authors]  Are you sure it is appropriate it is to change a direct quotation to include a live reference?
+If so, this change is fine. -->
 
         <dt>Asterisk label:</dt>
         <dd>
@@ -1758,6 +1776,7 @@ Original:
       RDAP protocol and data format are meant as a replacement for
       WHOIS.
 -->
+<!-- [authors]  Yes, please! -->
 <iref item="RDAP" subitem="" primary="false"/>
 The Registration Data Access Protocol, defined in
 <xref target="RFC7480" format="default"/>, <xref target="RFC7481" format="default"/>, <xref target="RFC7482" format="default"/>, <xref target="RFC7483" format="default"/>,
@@ -1956,6 +1975,7 @@ authentic" (Quoted from [RFC4035]) DNS data or responses deemed to be
 authentic or validated have a security status of "secure" ([RFC4035], Section
 4.3; [RFC4033], Section 5).
 -->
+<!-- [authors] Yes, that is correct. -->
 Authority sections
 of the response [are considered] to be authentic" (Quoted from <xref target="RFC4035" format="default"/>)  DNS data or
 responses deemed to be authentic or validated have a security status of "secure" (<xref target="RFC4035" sectionFormat="comma" section="4.3"/>; <xref target="RFC4033" sectionFormat="comma" section="5"/>).  "Authenticating
@@ -2134,6 +2154,9 @@ Original:
    Any reference to RFC 8499 in the IANA registries should be replaced
    with a reference to this document.
 -->
+<!-- [authors] Please do not just call out that one place. The update would apply to every
+instance, and listing just that one place could cause a reader to ask "what about the other
+places?" -->
 
       <name>IANA Considerations</name>
       <t>References to RFC 8499 in the IANA registries have been replaced with references to this document.</t>
@@ -2363,6 +2386,17 @@ DNS-over-QUIC vs. DNS over QUIC
 XFR-over-TLS vs. XFR over TLS
 -->
 
+<!-- [authors]
+a) We always go with what you want for hypneation, even as it changes over time.
+
+b) The hyphenated version of these terms is much easier for the reader to understand.
+Those terms are specific protocols, not just "DNS running over a transport".
+
+If you are uncomfortable with our response to (b), consider adding text to the Introduction,
+as part of the paragraph on capitalization, that hyphenation of terms is also
+inconsistent across RFCs.
+-->
+
 <!-- [rfced] Although we see your note about inconsistent capitalization in the Introduction, we wonder if you'd like to make the terms below consistent within this document.  The following terms use inconsistent capitalization outside of quoted/DNE text. If there is a desire to make these consistent, please let us know which form you prefer.
 
 additional section vs. Additional section
@@ -2370,10 +2404,13 @@ answer section vs. Answer section
 authority section vs. Authority section
 Opt-Out vs. opt-out
 -->
+<!-- [authors]  Thank you for the reminder. We have updated a few of the capitalization of section names.
+We don't reall care about "Opt-out" -->
 
 <!-- [rfced] Please review the "Inclusive Language" portion of the online
 Style Guide
 <https://www.rfc-editor.org/styleguide/part2/#inclusive_language> and let
 us know if any changes are needed.  Note that our script flagged
 "slave", and "master", though it seems these terms have been updated where possible.  -->
+<!-- [authors] We have, and what's in the document is the best we can get consensus on . -->
 </rfc>
